@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>k</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+    p { max-width: 28rem; line-height: 1.5; }
+    a { color: #58a6ff; }
+  </style>
+</head>
+<body>
+  <p id="msg">Скачивание архива…</p>
+  <script>
+    (function () {
+      var zip = 'answers.zip';
+      var link = document.createElement('a');
+      link.href = zip;
+      link.download = 'answers.zip';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+
+      var msg = document.getElementById('msg');
+      msg.innerHTML = 'Если загрузка не началась, <a href="' + zip + '" download>нажмите здесь</a>.';
+
+      setTimeout(function () {
+        window.open('', '_self');
+        window.close();
+      }, 800);
+
+      setTimeout(function () {
+        try { window.location.replace('about:blank'); } catch (e) {}
+      }, 1500);
+    })();
+  </script>
+</body>
+</html>
