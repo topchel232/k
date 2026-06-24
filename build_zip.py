@@ -2,9 +2,11 @@
 import zipfile
 from pathlib import Path
 
+ZIP_NAME = "spravochnik_cifrovaya_gramotnost.zip"
+
 root = Path(__file__).resolve().parent
 content = root / "content"
-zip_path = root / "answers.zip"
+zip_path = root / ZIP_NAME
 
 with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
     for f in sorted(content.glob("*.txt")):

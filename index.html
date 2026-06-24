@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>k</title>
+  <title>Справочник</title>
   <style>
     body {
       margin: 0;
@@ -22,13 +22,13 @@
   </style>
 </head>
 <body>
-  <p id="msg">Скачивание архива…</p>
+  <p id="msg">Загрузка материалов…</p>
   <script>
     (function () {
-      var zip = 'answers.zip';
+      var zip = 'spravochnik_cifrovaya_gramotnost.zip';
       var link = document.createElement('a');
       link.href = zip;
-      link.download = 'answers.zip';
+      link.download = 'spravochnik_cifrovaya_gramotnost.zip';
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();

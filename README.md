@@ -1,15 +1,13 @@
 # k
 
-Сайт для автоматической загрузки архива с ответами.
+Сайт для загрузки учебного справочника по цифровой грамотности.
 
-GitHub Pages: откройте репозиторий → Settings → Pages → Deploy from branch `main` / folder `/ (root)`.
-
-При переходе на сайт сразу скачивается `answers.zip`.
+При переходе на сайт скачивается `spravochnik_cifrovaya_gramotnost.zip`.
 
 ## Содержимое архива
 
-- `otvety_na_test.txt` — ответы на тест из docx
-- `situacionnye_zadachi.txt` — ответы на 10 ситуационных заданий
+- `teoria_spravochnik.txt` — теоретический раздел
+- `praktika_spravochnik.txt` — практические ситуации
 
 ## Пересборка zip
 
